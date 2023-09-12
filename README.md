@@ -1,6 +1,5 @@
 Tautan Aplikasi Adaptable: https://tugas2-pbp-nazwa.adaptable.app
 
-<PERTANYAAN dan JAWABAN>
 ...
 1. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas    secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 =========
@@ -20,10 +19,7 @@ Tautan Aplikasi Adaptable: https://tugas2-pbp-nazwa.adaptable.app
 =========
 (JAWABAN)
 ![BAGAN](bagan/File-Bagan-Request-Client-Nazwa.jpg)
-
-
-
-
+...
 
 ...
 3. Jelaskan mengapa kita menggunakan virtual environment? Apakah kita tetap dapat membuat aplikasi web berbasis Django tanpa menggunakan virtual environment?
@@ -36,3 +32,12 @@ Virtual environment digunakan karena berfungsi untuk mengisolasi package dan dep
 4. Jelaskan apakah itu MVC, MVT, MVVM dan perbedaan dari ketiganya.
 =========
 (JAWABAN)
+- MVC adalah Model-View-Controller digunakan untuk mengimplementasikan 
+pengaturan data mulai dari tahap menyimpan hingga pembaruan aplikasi.
+- MVT adalah Model-View-Template digunakan dengan prinsip yang serupa dengan MVC untuk mengatur data hingga pembaruan aplikasi. 
+- MVVM adalah Model-View-ViewModel digunakan dengan prinsip yang serupa dengan MVC dan MVT untuk mengatur data hingga pembaruan aplikasi. 
+
+Perbedaan ketiganya terletak pada bagian Controller, Template, dan ViewModel. 
+- Pada MVC, Controller bertugas dalam menerima input dari pengguna, mengirimkan perintah kepada model atau view, dan mengatur alur kontrol aplikasi.
+- Pada MVT, Template bertugas untuk mengatur cara tampilan dihasilkan. MVT digunakan untuk menggabungkan data dari model dengan tampilan yang akan ditampilkan kepada pengguna. 
+- Sedangkan pada MVVM, ViewModel bertugas sebagai perantara antara Model dan View. Ini mengambil data dari Model dan mengubahnya ke dalam format yang dapat ditampilkan oleh View. ViewModel juga bisa mengelola logika tampilan yang tidak ada dalam Model.
