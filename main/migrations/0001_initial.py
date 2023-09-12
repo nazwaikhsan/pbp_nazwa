@@ -11,7 +11,7 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name="Product",
+            name="Item",
             fields=[
                 (
                     "id",
@@ -23,8 +23,7 @@ class Migration(migrations.Migration):
                     ),
                 ),
                 ("name", models.CharField(max_length=255)),
-                ("date_added", models.DateField(auto_now_add=True)),
-                ("price", models.IntegerField()),
+                ("amount", models.IntegerField()),
                 ("description", models.TextField()),
             ],
         ),
