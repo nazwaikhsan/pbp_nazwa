@@ -110,11 +110,51 @@ LAMPIRAN SCREENSHOT POSTMAN
 TUGAS 4
 
 1. Apa itu Django UserCreationForm, dan jelaskan apa kelebihan dan kekurangannya?
+JAWAB:
+UserCreationForm adalah impor formulir bawaan yang memudahkan pembuatan formulir pendaftaran pengguna dalam aplikasi web. Dengan formulir ini, pengguna baru dapat mendaftar dengan mudah di situs web Anda tanpa harus menulis kode dari awal.
+KELEBIHAN:
+-Integrasi Django Authentication
+UserCreationForm secara otomatis terikat dengan sistem autentikasi dari Django. 
+-Validasi Otomatis
+UserCreationForm memiliki validasi otomatis untuk memastikan bahwa input yang diberikan oleh pengguna sesuai dengan aturan yang ditetapkan, seperti memeriksa keunikan nama pengguna (username) dan kekuatan kata sandi (password).
+-Mudah dikostumisasi
+UserCreationForm bisa disesuaikan dengan kebutuhan kita seperti melakukan penambahan atribut tambahan. 
+
+KEKURANGAN:
+-Fitur Masih Sederhana
+Untuk implementasi pada fitur yang lebih kompleks, UserCreationForm masih memiliki keterbatasan kapabilitas. 
+-Masalah Keamanan
+Apabila terjadi kesalahan konfigurasi, hal ini dapat berdampak terhadap keamanan. Contohnya seperti serangan XSS, CSRF, dan middleman. 
+
 
 2. Apa perbedaan antara autentikasi dan otorisasi dalam konteks Django, dan mengapa keduanya penting?
+JAWAB:
+Autentikasi adalah proses verifikasi untuk mengetahui identitas kita sebagai user yang melakukan log in, sedangkan otorisasi adalah proses yang memverifikasi apakah kita memiliki akses terhadap suatu peramban. Jadi autentikasi untuk mengetahui identitas user seperti username dan password, kalau otorisasi untuk mengetahui apakah kita berhak/memiliki akses terhadap suatu file maupun peramban yang di logged in. 
+
 
 3. Apa itu cookies dalam konteks aplikasi web, dan bagaimana Django menggunakan cookies untuk mengelola data sesi pengguna?
+JAWAB: 
+Cookies adalah sekumpulan data yang dikirim dari peramban dan nantinya akan dikirimkan kembali (disimpan) ke komputer pengguna oleh peramban pengguna saat berselancar kembali. Kegunaan cookies dalam mengelola data sesi pengguna:
+- Menyimpan informasi log in
+Cookies memungkinkan penggunanya untuk dapat mengunjungi website yang sama dikemudian hari tanpa harus kembali menginput username dan password serta identitas lainnya karena sudah tersimpan. 
+- Menyimpan pengaturan yang di set up pada website yang telah diakses
+Selain menyimpan informasi log in, cookies juga menyimpan riwayat lain seperti pengaturan dari website. Misalnya website yang dibuka berbahasa jepang namun di set up menjadi bahasa inggris, saat kita membuka kembali website nya, akan langsung direkam riwayat pengaturannya sehingga website yang ditampilkan akan tetap berbahasa inggris. 
+- Menampilkan iklan
+Melalui data sesi pengguna, cookies dapat menampilkan iklan sesuai dengan aktivitas browsingnya. Misalnya pengguna baru saja mengakses website yang menawarkan produk kecantikan, saat pengguna mengakses suatu web yang menampilkan iklan, nantinya iklan tersebut akan berkaitan dengan produk kecantikan berdasarkan riwayat dari aktivitas browsing sebelumnya. 
+
 
 4. Apakah penggunaan cookies aman secara default dalam pengembangan web, atau apakah ada risiko potensial yang harus diwaspadai?
+Cookies sebenarnya aman apabila diimplementasikan dengan tepat. Namun, tetap ada kemungkinan terjadinya risiko potensial dari hacker yang harus diwaspadai diantaranya adalah:
+- Mar-In-The-Middle Attack
+Hacker bertindak sebagai penyusup diantara pengguna dan web server. Data yang ditransfer diantara keduanya akan diinterupsi dan diambil oleh middle man atau hacker. 
+- XSS Attack
+Menyisipkan kode umpan yang berbahaya ke suatu website, sehingga pengguna yang mengunjungi website dapat termakan umpan kode tersebut. 
+- CSRF Attack
+Memengaruhi/menjebak pengguna untuk melakukan tindakan yang tidak seharusnya dilakukan seperti mengklik tombol tertentu. 
+
 
 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+JAWAB:
+- Langkah paling pertama adalah mengaktifkan environment pada terminal. Lalu, akan dibuat form registrasi untuk pengguna. Setelah itu, ditambahkan fungsi baru yang namanya register. Fungsi ini ditambahkan pada file views.py yang ada di direktori main.
+- Setelah menambahkan fungsi baru register di views.py, selanjutnya adalah mengimport redirect, UserCreationForm, dan juga messages. Lalu, selanjutnya ditambahkan file baru register.html pada subdirektori templates pada direktori main. 
+- 
