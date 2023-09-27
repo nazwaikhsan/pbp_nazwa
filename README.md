@@ -161,4 +161,20 @@ JAWAB:
 - Lalu, saatnya membuat fungsi log in yang nantinya digunakan untuk autentikasi akun dengan membuka file views.py dan membuat fungsi dengan nama login_user dengan parameter request, lalu melakukan import authenticate dan log in yang nantinya berfungsi untuk melakukan autentikasi akun pada website nya.
 - Sama seperti langkah sebelumnya, dibuat juga berkas baru pada subdirektori templates yang ada di direktori main dengan nama login.html, setelah menambahkan kode didalamnya, ditambahkan path baru fungsi tersebut pada file urls.py. Hal yang sama juga dilakukan pada saat membuat fungsi log out. Bedanya, pada fungsi log out, kita tidak menambahkan file baru di subdirektori templates, melainkan hanya menambahkan modifikasi minor pada file main.html
 - Setelah membuat form registrasi akun, fungsi login dan logout, saatnya membuat restriksi akses, hal ini nantinya akan membuat pengguna yang ingin mengakses web utama harus melakukan login terlebih dahulu. Langkah pertamanya adalah membuka berkas views.py dan menambahkan import login_required. Selanjutnya dilakukan modifikasi pada file views.py dengan menambahkan '@login_required(login_url='/login')' diatas fungsi show_main, hal ini gunanya agar website hanya bisa diakses oleh pengguna yang sudah login (terautentikasi). 
-- 
+- Selanjutnya, akan ditampilkan riwayat last login dengan pemanfaatan cookies pada website dengan cara membuka kembali file views.py dan menambahkan import HttpResponseRedirect, reverse, dan datetime pada bagian paling atas.
+- Setelahnya dilakukan modifikasi minor pada fungsi login_user untuk menambahkan cookie yang bernama last_login untuk melihat kapan terakhir kali pengguna melakukan login. Caranya adalah dengan mengganti kode yang ada pada blok if user is not None. 
+- Lalu, pada fungsi show_main, ditambahkan potongan kode 'last_login': request.COOKIES['last_login'] ke dalam variabel context. Setelah itu, dilakukan penambahan pada fungsi logout_user dengan kode 'response.delete_cookie('last_login')' yang berfungsi untuk menghapus cookie last_login saat pengguna melakukan logout.
+- Terakhir, untuk menampilkan riwayat last login, dibuka kembali berkas main.html dan ditambahkan potongan kode '<h5>Sesi terakhir login: {{ last_login }}</h5>' . Seperti ketentuan di soal, diminta untuk membuat 2 akun baru untuk mengakses website, akan dilampirkan hasil ss tampilannya dibawah. 
+- Langkah paling terakhir adalah menghubungkan Model Product dan User sehingga pengguna yang sedang terotorisasi hanya melihat produk-produk yang telah dibuat sendiri. Pada models.py ditambahkan kode yang mengimport User setelah kode mengimport models. Lalu, pada class Product, ditambahkan atribut baru 'user = models.ForeignKey(User, on_delete=models.CASCADE)' yang berfungsi untuk menghubungkan satu produk dengan satu user melalui sebuah relationship, dimana sebuah produk pasti terasosiasikan dengan seorang user. Selanjutnya, pada file views.py, dilakukan perubahan minor pada fungsi create_product dan juga fungsi show_main. 
+- Karena dilakukan penambahan atribut, sehingga perlu dilakukan migrasi supaya perubahan atribut tercatat dan tersimpan. Setelah migrasi sukses, maka proyek sudah bisa di-run sesuai dengan ketentuan checklist yang berlaku. 
+
+
+LAMPIRAN GAMBAR:
+- Tampilan Utama:
+![tampilanUtama](screenshots/tampilanUtama.png)
+
+- Tampilan Akun baru 1
+![akunbaru1](screenshots/akunbaru1.png)
+
+- Tampilan Akun baru 2
+![akunbaru2](screenshots/akunbaru2.png)
