@@ -180,4 +180,19 @@ LAMPIRAN GAMBAR:
 ![akunbaru2](screenshots/akunbaru2.png)
 
 --------------------------------------------------------------------------
+TUGAS 5
 
+1. Jelaskan manfaat dari setiap element selector dan kapan waktu yang tepat untuk menggunakannya.
+JAWAB: 
+
+2. Jelaskan HTML5 Tag yang kamu ketahui.
+JAWAB:
+
+3. Jelaskan perbedaan antara margin dan padding.
+JAWAB: 
+
+4. Jelaskan perbedaan antara framework CSS Tailwind dan Bootstrap. Kapan sebaiknya kita menggunakan Bootstrap daripada Tailwind, dan sebaliknya?
+JAWAB:
+
+5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
+JAWAB:
