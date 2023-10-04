@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card" style="background-color: #ff69b4; border-radius: 10px;">
+                <div class="card-header" style="background-color: #ff1493; font-size: 50px; color: white;">Edit Product</div>
+                <div class="card-body">
+                    <form method="POST">  
+                        {% csrf_token %}  
+                        <table>  
+                            <tr>
+                                <td style="color: white;">Name:</td>
+                                <td>{{ form.name }}</td>
+                            </tr>
+                            <tr>
+                                <td style="color: white;">Amount:</td>
+                                <td>{{ form.amount }}</td>
+                            </tr>
+                            <tr>
+                                <td style="color: white;">Price:</td>
+                                <td>{{ form.price }}</td>
+                            </tr>
+                            <tr>
+                                <td style="color: white;">Description:</td>
+                                <td>{{ form.description }}</td>
+                            </tr>
+                            <tr>  
+                                <td></td>
+                                <td><input type="submit" value="Edit Product" style="background-color: #ff1493; color: white; border: none;"></td>  
+                            </tr>  
+                        </table>  
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
