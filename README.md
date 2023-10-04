@@ -218,3 +218,7 @@ Digunakan Saat: Membutuhkan pengembangan cepat dengan antarmuka pengguna yang be
 
 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 JAWAB:
+-Melakukan penambahan Bootstrap di base.html untuk mengimplementasikan bootstrap pada tampilan web.
+-Menambahkan fitur edit dan delete untuk produk, dengan menambah fungsi edit_product dan juga delete_product pada views.py, lalu menambahkan path pada kedua fungsi baru tersebut di urls.py
+-Pada main.html, ditambahkan button edit dan juga delete pada setiap produk yang disimpan pada database-nya. 
+-Dalam melakukan variasi desain web, digunakan banyak fitur, seperti menambahkan table-striped, lalu mengubah warna font, align nya, serta mengubah tampilan warna pada button. 
