@@ -184,15 +184,37 @@ TUGAS 5
 
 1. Jelaskan manfaat dari setiap element selector dan kapan waktu yang tepat untuk menggunakannya.
 JAWAB: 
+- Class Selector: Memilih elemen dengan kelas tertentu. Memungkinkan styling dan manipulasi JavaScript pada elemen yang memiliki kelas tersebut. Digunakan saat ingin memengaruhi beberapa elemen dengan properti yang sama.
+- ID Selector: Memilih elemen dengan ID tertentu. Digunakan jika hanya ada satu elemen dengan ID tersebut. Sebaiknya digunakan dengan hati-hati karena ID harus unik dalam satu halaman HTML. Digunakan ketika ingin memengaruhi satu elemen unik pada halaman.
+- Attribute Selector : Memilih elemen dengan atribut dan nilai tertentu. Misalnya, [type="text"] akan memilih input dengan type atribut bernilai text. Digunakan saat ingin memilih elemen berdasarkan atribut atau nilainya.
+
 
 2. Jelaskan HTML5 Tag yang kamu ketahui.
 JAWAB:
+- <header>: Mengandung informasi pengenalan atau navigasi untuk dokumen atau bagian dokumen.
+- <nav>: Mengandung tautan navigasi.
+- <section>: Mengandung konten terkait dalam dokumen.
+- <article>: Mengandung konten independen yang dapat berdiri sendiri, seperti posting blog atau artikel berita.
+- <aside>: Mengandung konten terkait yang berada di samping konten utama, seperti iklan atau daftar tag.
+- <footer>: Mengandung informasi penutupan dokumen atau bagian dokumen, seperti informasi kontak atau tautan sosial media.
+
 
 3. Jelaskan perbedaan antara margin dan padding.
 JAWAB: 
+Margin digunakan untuk mengatur ruang di luar batas elemen. Tidak memiliki background dan transparan, sehingga elemen di belakangnya bisa terlihat melalui margin. Sedangkan kalau Padding digunakan untuk mengatur ruang di antara batas elemen dan kontennya. Padding memiliki background, jadi tidak transparan. Secara garis besar, margin digunakan untuk menata letak dari sisi luar, sedangkan padding digunakan untuk menata letak dari sisi dalam.
+
 
 4. Jelaskan perbedaan antara framework CSS Tailwind dan Bootstrap. Kapan sebaiknya kita menggunakan Bootstrap daripada Tailwind, dan sebaliknya?
 JAWAB:
+Tailwind CSS:
+Kelebihan: Fleksibel, konfigurasi sangat rinci, memungkinkan pengembangan desain yang sangat customized.
+Minusnya: Membutuhkan penulisan kelas yang lebih banyak, memerlukan pembelajaran sintaks khusus Tailwind.
+Digunakan Saat: Membutuhkan desain yang sangat customized dan lebih fleksibel dalam pengembangan UI.
+
+Bootstrap:
+Kelebihan: Lebih cepat untuk pengembangan karena banyak komponen UI siap pakai, sintaks lebih sederhana.
+Minusnya: Lebih sulit untuk membuat desain yang sangat customzied tanpa menyesuaikan CSS Bootstrap.
+Digunakan Saat: Membutuhkan pengembangan cepat dengan antarmuka pengguna yang bersih dan modern, terutama jika tidak memerlukan desain yang sangat unik.
 
 5. Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step (bukan hanya sekadar mengikuti tutorial).
 JAWAB:
