@@ -222,3 +222,43 @@ JAWAB:
 -Menambahkan fitur edit dan delete untuk produk, dengan menambah fungsi edit_product dan juga delete_product pada views.py, lalu menambahkan path pada kedua fungsi baru tersebut di urls.py
 -Pada main.html, ditambahkan button edit dan juga delete pada setiap produk yang disimpan pada database-nya. 
 -Dalam melakukan variasi desain web, digunakan banyak fitur, seperti menambahkan table-striped, lalu mengubah warna font, align nya, serta mengubah tampilan warna pada button. 
+
+--------------------------------------------------------------------------
+TUGAS 6
+
+1. Jelaskan perbedaan antara asynchronous programming dengan synchronous programming.
+JAWAB:
+Asynchronous programming adalah pemrograman dengan mekanisme fungsi lainnya dapat dijalankan meskipun fungsi yang sebelumnya masih dalam proses, sehingga eksekusi fungsi yang ada pada pemrograman tersebut tidak harus sistematis. Dilain sisi, synchronous programming menjalankan fungsi secara sistematis. Dari segi lama waktu eksekusi suatu program, proses asynchronous cenderung lebih cepat dibandingkan dengan proses synchronous. 
+
+2. Dalam penerapan JavaScript dan AJAX, terdapat penerapan paradigma event-driven programming. Jelaskan maksud dari paradigma tersebut dan sebutkan salah satu contoh penerapannya pada tugas ini.
+JAWAB:
+Paradigma event-driven programming memiliki konsep kerja yang bergantung pada kejadian tertentu. Aliran kontrol (control flow) program ditentukan oleh peristiwa, bukan oleh urutan eksekusi kode. Program yang dirancang dengan paradigma event-driven merespons peristiwa yang terjadi, seperti klik mouse, input pengguna, atau data yang tiba melalui jaringan. Sebagai respons terhadap peristiwa-peristiwa ini, program akan menjalankan fungsi atau tugas-tugas tertentu. Pada tugas ini, penerapan paradigma event-driven programming dapat dilihat pada penggunaan AJAX (Asynchronous JavaScript and XML) untuk memuat data produk secara asinkron (asynchronous). Ketika pengguna mengklik tombol "Add Product by AJAX", sebuah event klik terjadi. Pada saat event ini terjadi, fungsi JavaScript yang menggabungkan AJAX dipanggil.
+
+3. Jelaskan penerapan asynchronous programming pada AJAX.
+JAWAB:
+Dalam Asynchronous programming yang diimplementasikan pada AJAX, operasi-operasi yang memakan waktu seperti mengambil data dari server dilakukan secara non-blocking. Ini berarti, meskipun aplikasi mengirim permintaan ke server, sehingga aplikasi dapat langsung menjalankan kode lain atau merespons interaksi pengguna tanpa harus menunggu operasi AJAX selesai.
+
+4. Pada PBP kali ini, penerapan AJAX dilakukan dengan menggunakan Fetch API daripada library jQuery. Bandingkanlah kedua teknologi tersebut dan tuliskan pendapat kamu teknologi manakah yang lebih baik untuk digunakan.
+JAWAB:
+**Fetch API**
+- Native JavaScript API: 
+Fetch API adalah bagian dari standar JavaScript modern. Ini berarti tidak perlu mengunduh atau menyertakan library tambahan, karena sudah ada secara built-in di dalam browser. Ini mengurangi ukuran dan kompleksitas proyek.
+
+- Promise-Based: 
+Fetch API mengembalikan objek Promise, yang memungkinkan penggunaan metode seperti .then() dan .catch() untuk menangani respons dari server. Ini membuatnya lebih mudah untuk mengelola asynchrony dan mengatasi operasi AJAX yang kompleks.
+
+- Fleksibilitas dan Kontrol: 
+Fetch API memberi pengembang lebih banyak kendali atas request dan response, seperti mengatur header, metode HTTP, dan mode cors. Fleksibilitas ini memberi ruang untuk menyesuaikan permintaan sesuai dengan kebutuhan proyek.
+
+
+**jQuery AJAX**:
+- Cross-Browser Compatibility: 
+Salah satu kelebihan utama jQuery adalah ketika muncul, ia menyederhanakan pengembangan web lintas browser. Namun, saat ini, browser modern telah meningkatkan dukungan untuk fitur-fitur standar seperti Fetch API, yang membuat masalah kompatibilitas lintas browser kurang signifikan.
+
+- Sintaks yang Mudah: 
+Salah satu alasan pengembang memilih jQuery adalah sintaks yang lebih mudah digunakan dan dipahami, terutama bagi mereka yang baru memasuki dunia pengembangan web. Ini memungkinkan pemula mengambil alih pengembangan web dengan cepat.
+
+- Plugin Ekosistem: 
+jQuery memiliki ekosistem plugin yang luas yang mencakup berbagai fitur siap pakai, dari animasi hingga validasi formulir. Jika proyek Anda membutuhkan banyak plugin tambahan, jQuery bisa memberi manfaat karena ada kemungkinan sudah ada plugin yang memenuhi kebutuhan tersebut.
+
+Menurut saya penggunaan teknologi Fetch API, hal ini karena implementasi AJAX masih sederhana dan belum memerlukan properti yang kompleks. Selain itu, dalam pengembangan modern, sudah banyak proyek yang memanfaatkan modul JavaScript, manajemen status, dan kerangka kerja frontend seperti React, Angular, atau Vue.js, banyak pengembang memilih untuk mengandalkan Fetch API dan pendekatan JavaScript modern karena kebersamaan yang lebih baik dengan teknologi-teknologi tersebut.
